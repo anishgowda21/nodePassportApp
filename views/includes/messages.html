@@ -1,0 +1,21 @@
+{% if errors %} {% for err in errors %}
+<div class="alert alert-warning alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{{err.msg}}</strong>
+</div>
+{% endfor %} {%endif%} {% if(success_msg != '') %}
+<div class="alert alert-success alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{{success_msg}}</strong>
+</div>
+{%endif%} {% if(error_msg!= '') %}
+<div class="alert alert-warning alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{{error_msg}}</strong>
+</div>
+{%endif%} {% if(error!= '') %}
+<div class="alert alert-warning alert-dismissible">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>{{error}}</strong>
+</div>
+{%endif%}
